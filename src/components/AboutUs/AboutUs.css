@@ -7,7 +7,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 50px;
   align-items: center;
-  margin-bottom: 80px;
 }
 
 /* Reverse row (image left, text right) */

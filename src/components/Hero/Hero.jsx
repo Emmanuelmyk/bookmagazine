@@ -4,6 +4,12 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <section className="hero">
+      {/* Background image for mobile/tablet */}
+      <div className="hero-background">
+        <img src="/assets/womanbg.png" alt="" className="hero-bg-img" />
+        <div className="hero-overlay"></div>
+      </div>
+
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
@@ -13,7 +19,7 @@ const Hero = () => {
               <span className="highlight">Magazine & Book Store</span>
             </h1>
             <p className="hero-description">
-              Where Every Woman’s Journey Finds Its Voice.
+              Where Every Woman's Journey Finds Its Voice.
             </p>
             <div className="hero-buttons">
               <button className="btn btn-primary">
@@ -33,7 +39,6 @@ const Hero = () => {
                   />
                 </svg>
               </button>
-              {/* <button className="btn btn-outline">Learn More</button> */}
             </div>
           </div>
           <div className="hero-image">

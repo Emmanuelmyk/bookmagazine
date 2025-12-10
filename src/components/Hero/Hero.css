@@ -2,6 +2,12 @@
   padding: 0px 140px;
   background: var(--bg);
   position: relative;
+  overflow: hidden;
+}
+
+/* Background image - hidden on desktop, visible on mobile/tablet */
+.hero-background {
+  display: none;
 }
 
 .hero-content {
@@ -9,13 +15,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 24px;
   color: var(--dark);
 }
 
@@ -88,9 +95,39 @@
 }
 
 /* Tablet */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero {
-    padding: 120px 0 60px;
+    padding: 140px 60px 80px;
+  }
+
+  /* Show background image - 80% visible */
+  .hero-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+    transform: scale(1.05);
+    opacity: 0.8; /* 80% visible */
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay to help text pop */
+    z-index: 1;
   }
 
   .hero-content {
@@ -106,15 +143,65 @@
   .hero-buttons {
     justify-content: center;
   }
-  .hero-img {
+
+  /* Hide regular image */
+  .hero-image {
     display: none;
+  }
+
+  /* Enhanced text visibility with background */
+  .hero-title {
+    color: var(--dark);
+    border-radius: 12px;
+    display: inline-block;
+  }
+
+  .hero-description {
+    color: var(--dark);
+    padding: 16px 24px;
+    border-radius: 12px;
   }
 }
 
 /* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 24px 60px;
+  }
+
+  .hero-bg-img {
+    filter: blur(4px);
+    opacity: 0.75; /* Slightly less visible on mobile for better text readability */
+  }
+
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .hero-title {
+    padding: 12px 20px;
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    padding: 14px 20px;
+  }
+}
+
+/* Small Mobile */
 @media (max-width: 480px) {
+  .hero {
+    padding: 100px 20px 50px;
+  }
+
   .hero-title {
     font-size: 2rem;
+    padding: 12px 16px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    padding: 12px 16px;
   }
 
   .hero-buttons {
@@ -127,8 +214,12 @@
     justify-content: center;
   }
 
-  /* HIDE IMAGE ON MOBILE */
-  .hero-img {
-    display: none;
+  .hero-bg-img {
+    filter: blur(1px);
+    opacity: 0.7; /* 70% visible on small mobile */
+  }
+
+  .hero-overlay {
+    /* background: rgba(255, 255, 255, 0.3); */
   }
 }

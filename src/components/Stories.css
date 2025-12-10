@@ -1,0 +1,81 @@
+.stories-section {
+  padding: 80px;
+  margin: auto;
+}
+
+.story-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 100px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Image on the RIGHT by default */
+.story-container .story-text {
+  flex: 1;
+}
+
+.story-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* SECOND BLOCK — Image Left */
+.story-container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Typography */
+.story-title {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.story-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .story-container,
+  .story-container.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  /* Image ALWAYS comes first on mobile */
+  .story-image {
+    order: -1;
+  }
+
+  .story-title {
+    font-size: 1.8rem;
+  }
+
+  .story-description {
+    font-size: 1rem;
+  }
+}

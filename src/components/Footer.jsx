@@ -29,7 +29,7 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <h3 className="footer-logo">MC MAGAZINE</h3>
+            <h3 className="footer-logo">Restored Woman</h3>
             <p className="footer-description">
               A magazine and book store dedicated to sharing diverse stories and
               cultures.
@@ -73,12 +73,11 @@ function Footer() {
 
         <div className="footer-bottom">
           <p className="copyright">
-            © {currentYear} MC Magazine. All rights reserved.
+            © {currentYear} Restored Woman. All rights reserved.
           </p>
           <div className="footer-extra">
-            {/* <span>Made with ♥ for cultural diversity</span>
             <span className="divider">•</span>
-            <span>ISSN 1234-5678</span> */}
+            <span>Powered by Ebass Group</span>
           </div>
         </div>
       </div>

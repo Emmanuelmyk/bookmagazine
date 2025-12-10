@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
+import logoImage from "../assets/rw.png"; // Import the image properly
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +21,17 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h1>MC MAGAZINE</h1>
+            <a
+              href="#"
+              className="logo-link"
+              onClick={(e) => e.preventDefault()}
+            >
+              <img
+                src={logoImage} // Use the imported image variable
+                alt="Restored Woman"
+                className="logo-img"
+              />
+            </a>
           </div>
 
           <nav className={`nav ${isMenuOpen ? "open" : ""}`}>

@@ -1,0 +1,167 @@
+.magazine-section {
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section-label {
+  display: inline-block;
+  padding: 8px 20px;
+  color: var(--accent);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 30px auto 0;
+  line-height: 1.8;
+}
+
+/* Reuse layout container */
+.magazine-content {
+  display: flex;
+  justify-content: center;
+}
+
+.magazine-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 900px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  transition: var(--transition);
+}
+
+.magazine-card:hover {
+  transform: translateY(-10px);
+}
+
+/* NEW — BOOK COVER SECTION */
+.book-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px; */
+}
+
+.book-cover-img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* NEW — DETAILS SIDE */
+.book-details {
+  /* padding: 50px 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.book-description {
+  color: var(--gray);
+  margin-bottom: 40px;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.book-btn {
+  padding: 18px 36px;
+  font-size: 1.1rem;
+  align-self: flex-start;
+}
+
+/* Button accent hover */
+.btn-accent {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-accent:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .magazine-card {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .book-cover {
+    padding: 30px;
+  }
+
+  .book-details {
+    padding: 40px 30px;
+  }
+
+  .book-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .book-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* Fade-in animation (kept from original CSS) */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

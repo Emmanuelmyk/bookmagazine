@@ -1,9 +1,9 @@
 import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import MagazineSection from "./components/MagazineSection";
-import BooksSection from "./components/BooksSection";
 import Footer from "./components/Footer";
+import FeatureRelease from "./components/featureRelease";
+import Stories from "./components/Stories";
 import "./App.css";
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <MagazineSection />
-        {/* <BooksSection /> */}
+        <FeatureRelease />
+        <Stories />
       </main>
       <Footer />
     </div>

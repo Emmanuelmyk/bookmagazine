@@ -1,0 +1,42 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Page transition animations */
+.fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Section spacing */
+section {
+  padding: 80px 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background-color: rgba(247, 250, 252, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}

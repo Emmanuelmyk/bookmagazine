@@ -1,0 +1,234 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: white; /* Changed from transparent to white */
+  transition: all 0.3s ease;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Added subtle border */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Added subtle shadow */
+}
+
+.header.scrolled {
+  background-color: white; /* Kept solid white when scrolled */
+  backdrop-filter: none; /* Removed blur effect */
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Enhanced shadow when scrolled */
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  color: var(--dark); /* Changed to primary color */
+  letter-spacing: 0.5px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+.logo h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary); /* Changed to accent color */
+  transition: width 0.3s ease;
+}
+
+.logo h1:hover::after {
+  width: 100%;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem; /* Increased gap */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--dark); /* Changed to gray color */
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px; /* Adjusted padding */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background: rgba(214, 158, 46, 0.05); /* Added background on hover */
+  transform: translateY(-1px);
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 60%; /* Reduced width for cleaner look */
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.bar {
+  width: 28px;
+  height: 2.5px;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.bar.active:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.bar.active:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.active:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .nav ul {
+    gap: 0.5rem; /* Adjusted for tablet */
+  }
+
+  .nav-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header {
+    padding: 16px 0;
+  }
+
+  .header.scrolled {
+    padding: 12px 0;
+  }
+
+  .logo h1 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white; /* Solid white background */
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 14px 12px;
+    text-align: center;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 4px;
+  }
+
+  .nav-link:hover {
+    background: rgba(214, 158, 46, 0.1);
+    color: var(--primary);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 12px 8px;
+  }
+}

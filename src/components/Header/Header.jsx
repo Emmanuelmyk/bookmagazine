@@ -20,7 +20,7 @@ const Header = () => {
           <div className="logo">
             <a href="#" onClick={(e) => e.preventDefault()}>
               <img
-                src="/src/assets/rw.png"
+                src="/assets/rw.png"
                 alt="Restored Woman"
                 className="logo-img"
               />

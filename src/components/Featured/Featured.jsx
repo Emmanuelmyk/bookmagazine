@@ -15,7 +15,7 @@ const Featured = () => {
     title: "The Restored Woman Magazine",
     price: 2500, // NGN
     format: "PDF",
-    image: "/src/assets/cover1.png",
+    image: "/assets/cover1.png",
   };
 
   // Handle form update

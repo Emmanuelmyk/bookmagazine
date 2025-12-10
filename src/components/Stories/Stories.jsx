@@ -7,13 +7,13 @@ const Stories = () => {
       title: "Wear Your Restoration",
       description:
         "A powerful exploration of identity and cultural heritage. This book offers insights into personal transformation and the journey toward authentic self-expression.",
-      image: "../src/assets/cover2.png",
+      image: "/assets/cover2.png",
     },
     {
       title: "Cultural Narratives",
       description:
         "Dive deep into stories that celebrate diversity and showcase the rich tapestry of global cultures. Each page brings new perspectives and understanding.",
-      image: "../src/assets/cover3.png",
+      image: "/assets/cover3.png",
     },
   ];
 

@@ -13,7 +13,7 @@ const Featured = () => {
   // Book info
   const book = {
     title: "The Restored Woman Magazine",
-    price: 2500, // NGN
+    price: 4, // NGN
     format: "PDF",
     image: "/assets/cover1.png",
   };
@@ -110,7 +110,7 @@ const Featured = () => {
               <div>
                 <h4>{book.title}</h4>
                 <p>Format: {book.format}</p>
-                <p className="price">₦{book.price.toLocaleString()}</p>
+                <p className="price">${book.price.toLocaleString()}</p>
               </div>
             </div>
 

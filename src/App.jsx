@@ -87,8 +87,8 @@ const App = () => {
       <Header />
       <main>
         <Hero />
-        <AboutUs />
         <Featured />
+        <AboutUs />
         <Stories />
       </main>
       <Footer />

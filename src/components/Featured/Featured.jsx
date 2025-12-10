@@ -63,7 +63,7 @@ const Featured = () => {
     <section className="featured">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Featured This Month</h2>
+          <h2 className="section-title">Featured</h2>
         </div>
 
         <div className="featured-card">

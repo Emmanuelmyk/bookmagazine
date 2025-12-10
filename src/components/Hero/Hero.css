@@ -20,6 +20,8 @@
 }
 
 .hero-title {
+  margin-top: 18px;
+  padding-bottom: 18px;
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
@@ -34,6 +36,7 @@
 }
 
 .hero-description {
+  padding-bottom: 18px;
   font-size: 18px;
   color: var(--gray);
   line-height: 1.8;
@@ -133,6 +136,10 @@
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
+  }
+
+  .hero-description {
+    margin: 0 auto 32px;
   }
 
   .hero-buttons {

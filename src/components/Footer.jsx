@@ -76,9 +76,9 @@ function Footer() {
             © {currentYear} MC Magazine. All rights reserved.
           </p>
           <div className="footer-extra">
-            <span>Made with ♥ for cultural diversity</span>
+            {/* <span>Made with ♥ for cultural diversity</span>
             <span className="divider">•</span>
-            <span>ISSN 1234-5678</span>
+            <span>ISSN 1234-5678</span> */}
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Featured from "./components/Featured/Featured";
 import Stories from "./components/Stories/Stories";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <main>
         <Hero />
+        <AboutUs />
         <Featured />
         <Stories />
       </main>

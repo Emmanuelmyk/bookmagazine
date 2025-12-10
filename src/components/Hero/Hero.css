@@ -106,6 +106,9 @@
   .hero-buttons {
     justify-content: center;
   }
+  .hero-img {
+    display: none;
+  }
 }
 
 /* Mobile */

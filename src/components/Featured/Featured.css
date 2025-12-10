@@ -26,7 +26,7 @@
   color: var(--primary);
   border-radius: var(--radius-full);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1.5px;
   margin-bottom: 16px;
   text-transform: uppercase;
@@ -45,7 +45,7 @@
 
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
+  font-weight: 400;
   color: var(--dark);
 }
 
@@ -104,7 +104,7 @@
 
 .featured-content h3 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
   color: var(--dark);
   line-height: 1.2;
@@ -133,7 +133,7 @@
   position: absolute;
   left: 0;
   color: var(--primary);
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -155,12 +155,12 @@
   color: var(--gray);
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .meta-value {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--primary);
 }
 
@@ -272,7 +272,7 @@
 
 .book-summary .price {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 400;
   color: var(--primary);
 }
 

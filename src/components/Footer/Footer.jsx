@@ -9,13 +9,10 @@ const Footer = () => {
       title: "Navigation",
       links: ["Home", "Magazine", "Books", "Blog", "About"],
     },
+
     {
-      title: "Resources",
-      links: ["FAQs", "Shipping", "Returns", "Privacy Policy", "Terms"],
-    },
-    {
-      title: "Connect",
-      links: ["Instagram", "Twitter", "Facebook", "LinkedIn", "YouTube"],
+      title: "Contact",
+      links: ["Email: mediamcmagazine@gmail.com", "Phone: +1 (470) 659-1338"],
     },
   ];
 

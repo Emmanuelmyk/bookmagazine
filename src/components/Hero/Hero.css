@@ -87,6 +87,7 @@
   border-radius: var(--radius-lg);
 }
 
+/* Tablet */
 @media (max-width: 768px) {
   .hero {
     padding: 120px 0 60px;
@@ -107,6 +108,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .hero-title {
     font-size: 2rem;
@@ -120,5 +122,10 @@
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* HIDE IMAGE ON MOBILE */
+  .hero-img {
+    display: none;
   }
 }

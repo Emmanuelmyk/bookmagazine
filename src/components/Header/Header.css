@@ -9,7 +9,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(79, 121, 66, 0.1);
   transition: var(--transition);
-  padding: 20px 0;
+  padding: 3px 0;
 }
 
 .header.scrolled {

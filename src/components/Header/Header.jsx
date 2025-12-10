@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import logoImage from "../assets/rw.png"; // Import the image properly
 
-function Header() {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -21,13 +18,9 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <a
-              href="#"
-              className="logo-link"
-              onClick={(e) => e.preventDefault()}
-            >
+            <a href="#" onClick={(e) => e.preventDefault()}>
               <img
-                src={logoImage} // Use the imported image variable
+                src="/src/assets/rw.png"
                 alt="Restored Woman"
                 className="logo-img"
               />
@@ -36,12 +29,10 @@ function Header() {
 
           <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
             <ul>
-              {navItems.map((item, index) => (
-                <li key={index}>
+              {navItems.map((item, i) => (
+                <li key={i}>
                   <a
                     href="#"
-                    className="nav-link"
-                    style={{ animationDelay: `${index * 0.1}s` }}
                     onClick={(e) => {
                       e.preventDefault();
                       setIsMenuOpen(false);
@@ -59,14 +50,14 @@ function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${isMenuOpen ? "active" : ""}`}></span>
+            <span className={isMenuOpen ? "active" : ""}></span>
+            <span className={isMenuOpen ? "active" : ""}></span>
+            <span className={isMenuOpen ? "active" : ""}></span>
           </button>
         </div>
       </div>
     </header>
   );
-}
+};
 
 export default Header;

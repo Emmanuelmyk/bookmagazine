@@ -1,52 +1,55 @@
 import React from "react";
 import "./Hero.css";
-import heroImage from "../assets/black kids.png"; // Update path as needed
 
-function Hero() {
+const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title">
-              Multicultural <br /> Magazine & Book Store
+              The Restored Woman
+              <br />
+              <span className="highlight">Magazine & Book Store</span>
             </h1>
             <p className="hero-description">
-              Discover diverse stories, cultures, and perspectives through our
-              magazine issues and books.
+              Where Every Woman’s Journey Finds Its Voice.
             </p>
             <div className="hero-buttons">
               <button className="btn btn-primary">
-                <span>Read Now</span>
+                Explore Collection
                 <svg
-                  className="btn-icon"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                 >
                   <path
-                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    d="M5 12h14M12 5l7 7-7 7"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
               </button>
+              {/* <button className="btn btn-outline">Learn More</button> */}
             </div>
           </div>
           <div className="hero-image">
-            <div className="image-container">
+            <div className="image-wrapper">
               <img
-                src={heroImage}
-                alt="Diverse collection of books and magazines"
+                src="/src/assets/black kids.png"
+                alt="Collection"
                 className="hero-img"
               />
+              <div className="image-decoration"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

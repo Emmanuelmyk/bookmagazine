@@ -1,23 +1,23 @@
 import React from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import FeatureRelease from "./components/featureRelease";
-import Stories from "./components/Stories";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Featured from "./components/Featured/Featured";
+import Stories from "./components/Stories/Stories";
+import Footer from "./components/Footer/Footer";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Header />
       <main>
         <Hero />
-        <FeatureRelease />
+        <Featured />
         <Stories />
       </main>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

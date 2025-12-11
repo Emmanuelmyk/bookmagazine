@@ -62,9 +62,9 @@ const Featured = () => {
   return (
     <section className="featured">
       <div className="container">
-        <div className="section-header">
+        {/* <div className="section-header">
           <h2 className="section-title">Featured</h2>
-        </div>
+        </div> */}
 
         <div className="featured-card">
           <div className="featured-image">

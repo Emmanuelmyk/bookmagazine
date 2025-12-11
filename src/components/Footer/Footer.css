@@ -328,3 +328,14 @@
     gap: 36px;
   }
 }
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 2px solid #e5e7eb;
+  font-size: 16px; /* FIX */
+  font-family: inherit;
+  transition: all 0.3s ease;
+}

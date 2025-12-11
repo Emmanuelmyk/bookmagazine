@@ -194,7 +194,7 @@
   background: #fff;
   padding: 32px;
   width: 100%;
-  max-width: 480px;
+  max-width: 520px;
   max-height: 90vh;
   overflow-y: auto;
   border-radius: 16px;
@@ -311,6 +311,160 @@ form .btn {
   justify-content: center;
 }
 
+/* Zelle Payment Details */
+.zelle-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.zelle-info-box {
+  background: linear-gradient(135deg, #f8faf9 0%, #e8f5e9 100%);
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.zelle-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(79, 121, 66, 0.2);
+}
+
+.zelle-header svg {
+  color: var(--primary);
+  stroke-width: 2;
+}
+
+.zelle-header h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+.zelle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.zelle-item:last-child {
+  margin-bottom: 0;
+}
+
+.zelle-item label {
+  font-size: 13px;
+  color: var(--gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.zelle-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  background: white;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(79, 121, 66, 0.2);
+}
+
+.highlight-amount {
+  font-size: 28px;
+  color: var(--primary);
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(79, 121, 66, 0.1),
+    rgba(79, 121, 66, 0.05)
+  );
+  border: 2px solid var(--primary);
+}
+
+.copy-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+.payment-instructions {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.payment-instructions h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.payment-instructions ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.payment-instructions li {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.payment-instructions li:last-child {
+  margin-bottom: 0;
+}
+
+.payment-instructions strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  border-color: #25d366;
+  gap: 10px;
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  border-color: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
+}
+
 .loading-spinner {
   display: inline-block;
   width: 18px;
@@ -357,6 +511,28 @@ form .btn {
 
   .modal-content {
     padding: 24px;
+    max-width: 95%;
+  }
+
+  .zelle-info-box {
+    padding: 20px;
+  }
+
+  .zelle-value {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .highlight-amount {
+    font-size: 24px;
+  }
+
+  .payment-instructions {
+    padding: 16px;
+  }
+
+  .payment-instructions li {
+    font-size: 13px;
   }
 }
 
@@ -380,5 +556,21 @@ form .btn {
 
   .book-summary img {
     margin: 0 auto;
+  }
+
+  .zelle-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .zelle-value {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+  }
+
+  .copy-btn {
+    width: 100%;
   }
 }

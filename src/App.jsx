@@ -6,6 +6,7 @@ import Stories from "./components/Stories/Stories";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import AboutUs from "./components/AboutUs/AboutUs";
+import WhatsAppFloat from "./components/WhatsAppFloat/WhatsAppFloat";
 
 const App = () => {
   const dotRef = useRef(null);
@@ -92,6 +93,7 @@ const App = () => {
         <Stories />
       </main>
       <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };

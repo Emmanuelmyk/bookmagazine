@@ -129,7 +129,8 @@
 }
 
 .featured-description li::before {
-  content: "✓";
+  /* content: "✓"; */
+  content: "-";
   position: absolute;
   left: 0;
   color: var(--primary);
